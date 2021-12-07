@@ -12,7 +12,7 @@ Key Features
     Customizable UI and localizations
     Thumbnail support
     Display image in a shape card with shadow
-    This is a part of an idea to design a beautiful carousle widget that display miultiple picture with animation and pagecontroller. 
+    This is a part of an idea to design a beautiful carouel widget that can display multiple pictures with animations and pagecontroller. 
 
 ## Message
 
