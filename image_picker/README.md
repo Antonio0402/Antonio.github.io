@@ -11,7 +11,7 @@ Key Features
     Take a picture option in the grid view
     Customizable UI and localizations
     Thumbnail support
-    Display image in a shap card with shadow
+    Display image in a shape card with shadow
     This is a part of an idea to design a beautiful carousle widget that display miultiple picture with animation and pagecontroller. 
 
 ## Message
