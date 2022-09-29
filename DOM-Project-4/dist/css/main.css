@@ -1,0 +1,62 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+  background: url("../img/blade-runner-2049-background.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 60%;
+  min-height: 30vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+}
+.container #timer {
+  font-size: 4.5rem;
+  width: 100%;
+  text-align: center;
+  margin: 0px auto;
+  padding: 2rem 0;
+}
+.container .buttons {
+  text-align: center;
+}
+.container .buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container .buttons button i {
+  border-radius: 0.5rem;
+  min-width: 2.5rem;
+  font-size: 2rem;
+  padding: 0.75rem;
+  color: white;
+}
+.container .buttons button #play {
+  background-color: #E38C01;
+  opacity: 0.8;
+}
+.container .buttons button #play:hover {
+  background-color: #E38C01;
+  opacity: 1;
+}
+.container .buttons button #pause {
+  background-color: #EA5A0A;
+  opacity: 0.8;
+}
+.container .buttons button #pause:hover {
+  background-color: #EA5A0A;
+  opacity: 1;
+}
+.container .buttons button #reset {
+  background-color: #5A6175;
+  opacity: 0.8;
+}
+.container .buttons button #reset:hover {
+  background-color: #5A6175;
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */

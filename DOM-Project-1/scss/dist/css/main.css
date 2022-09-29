@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url("../img/Headspace_background_image.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.container {
+  width: 60%;
+}
+
+.header {
+  font-size: 1.25rem;
+  border: solid 2px white;
+  color: white;
+  background-color: #262626;
+  width: 80%;
+  padding: 0.5rem;
+  margin: 1.5rem auto;
+  border-radius: 0.25rem;
+}
+
+.main-content {
+  width: 80%;
+  min-height: 30vh;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 4rem 3rem;
+}
+.main-content .text-area {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.main-content .person {
+  font-size: 1.75rem;
+  color: #F47D31;
+  text-transform: uppercase;
+  padding: 1.5rem;
+}
+.main-content .button-area #new-quote {
+  background-color: #5A6175;
+  font-size: 1rem;
+  font-weight: bold;
+  min-height: 3rem;
+  padding: 0 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 1.5rem;
+  border: none;
+  transition: all 0.2s eas-in-out;
+}
+.main-content .button-area #new-quote:hover {
+  cursor: pinter;
+  box-shadow: 0rem 0.125rem 0rem rgba(0, 0, 0, 0.2);
+}
+.main-content .button-area #new-quote:hover:active {
+  background-color: #F47D31;
+}/*# sourceMappingURL=main.css.map */

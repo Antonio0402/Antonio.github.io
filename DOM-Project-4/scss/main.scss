@@ -1,0 +1,74 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+  background: url('../img/blade-runner-2049-background.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .container {
+   width: 60%;
+   min-height: 30vh;
+   background-color: rgba(255, 255 ,255 ,0.7);
+   border-radius: 1.5rem;
+   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+   #timer {
+      font-size: 4.5rem;
+      width: 100%;
+      text-align: center;
+      margin: 0px auto;
+      padding: 2rem 0;
+    }
+
+    .buttons {
+      text-align: center;
+
+      button {
+        background-color: transparent;
+        // margin: 0 1rem;
+        border: none;
+        cursor: pointer;
+        i {
+          border-radius: 0.5rem;
+          min-width: 2.5rem;
+          font-size: 2rem;
+          padding: 0.75rem;
+          color: white;
+        }
+
+        #play {
+         background-color:  $play-color;
+         opacity: 0.8;
+
+         &:hover {
+            background-color: $play-color;
+            opacity: 1;
+          }
+        }
+
+        #pause {
+         background-color: $pause-color;
+         opacity: 0.8;
+         
+         &:hover {
+            background-color: $pause-color;
+            opacity: 1;
+          }
+        }
+
+        #reset {
+          background-color: #$reset-color; 
+           opacity: 0.8;
+         
+         &:hover {
+            background-color: #$reset-color;
+            opacity: 1;
+          } 
+        }
+      }
+    }
+  }
+
+  
+  

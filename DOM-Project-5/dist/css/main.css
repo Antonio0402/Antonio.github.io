@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url("../img/type-writer.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container #add-task-container {
+  min-width: 30vw;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.container #add-task-container input[type=text] {
+  flex-basis: 80%;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1.25rem;
+  border: black solid 2px;
+}
+.container #add-task-container button[id|=add-task] {
+  max-width: 3.5rem;
+  font-size: 1.5rem;
+  flex-basis: 20%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  border: black solid 2px;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+.container #add-task-container button[id|=add-task]:hover {
+  background-color: black;
+  color: white;
+}
+.container .task {
+  width: 100%;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.container .task li {
+  list-style: none;
+  flex-basis: 75%;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+}
+.container .task button {
+  max-width: 2.5rem;
+  flex-basis: 12.5%;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+.container .task .checkTask {
+  color: black;
+  font-size: 1rem;
+  border: solid 2px black;
+  transition: all 0.5s ease-in-out;
+}
+.container .task .checkTask:hover {
+  background-color: black;
+  color: white;
+}
+.container .task .deleteTask {
+  color: black;
+  font-size: 1rem;
+  border: solid 2px black;
+  transition: all 0.5s ease-in-out;
+}
+.container .task .deleteTask:hover {
+  background-color: black;
+  color: white;
+}/*# sourceMappingURL=main.css.map */

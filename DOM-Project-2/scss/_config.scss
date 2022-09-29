@@ -1,0 +1,13 @@
+$primary-color: #539660;
+$linear-color: linear-gradient(0deg, rgba(41, 137, 61, 0.25), rgba(41, 137, 61, 0.25)); 
+$background-color: rgba(41, 137, 61, 0.25);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+@mixin transition-ease {
+  transition: all .5s ease-in-out;
+}
+
