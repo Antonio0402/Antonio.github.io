@@ -1,0 +1,167 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+@use '../utilities' as u;
+
+/**
+ * Flexbox
+ */
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    
+    justify-content: space-between;
+  }  
+  
+  &-jc-ct {
+    
+    justify-content: center;  
+  }
+  &-ai-ct {
+
+    align-items: center;  
+  }
+}
+
+/** 
+  * Grid template for layout of 4 columns
+  */
+
+.grid-4cl {
+  
+  display: grid;
+  grid-template-columns: repeat((auto-fit), minmax(13rem, 1fr));
+  gap: 1.5rem;  
+
+  @include u.BreakPoint-up(large) {
+
+    justify-items: center;
+  }
+
+}
+
+// .grid-1cl {
+  
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   justify-items: center;
+// }
+
+.hide-for-mobile {
+  @include u.BreakPoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include u.BreakPoint-up(large) {
+    
+    display: none;
+  }
+}
+
+/** 
+  * Animaitons fade-in and fade-out of overlay
+  * when clicking on hamburger menu icon
+  */
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;  
+  }
+  1% {
+     visibility: visible;
+     opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;  
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.3s ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;  
+  }
+  99% {
+    opacity: 0;  
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;  
+  }
+}
+
+.fade-out {
+  animation: fade-out 0.3s ease-in-out forwards;
+}
+
+/**
+  * Center text
+  */
+.ct-txt {
+  text-align: center;  
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+
+  max-width: u.$max-width; /* 1 */
+  margin-inline: auto; /* 2 */
+
+  &--pd-all {
+    padding: u.$block-padding u.$inline-padding; /* 3 */
+  }
+
+  &--pd-line {
+    padding-inline: u.$inline-padding
+  }
+
+  &--pd-block {
+    padding-block: u.$block-padding;
+  }
+
+  &--pd-bl-end {
+    padding-block-end: u.$block-padding;  
+  }
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

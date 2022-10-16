@@ -1,0 +1,114 @@
+@use '../utilities' as u;
+
+.hero {
+  
+  display: grid;
+  grid-template-rows: minmax(17.5rem, 35vh) auto;
+    
+  @include u.BreakPoint-up(large) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  &__image {
+
+    position: relative;
+    display: grid;
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 100%;
+
+    @include u.BreakPoint-up(large) {
+
+      grid-column: 2 / -1;
+      min-height: 41rem;
+    }
+
+    &::before {
+
+      grid-column: 1 / 2;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: u.image('image-mockups.png', u.$image-url);
+      background-repeat: no-repeat;
+      background-size: 90%;
+      background-position: center bottom;
+
+      @include u.BreakPoint-up(medium) {
+
+        background-size: 60%;
+      }
+
+      @include u.BreakPoint-up(large) {
+
+        left: 0%;
+        width: 180%;
+        height: 130%;
+        background-size: 85%;
+        background-position: 130% 93%;
+      }
+      
+    }
+
+    &--bg {
+
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      position: absolute;
+      background-image: u.image('bg-intro-mobile.svg', u.$image-url);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;  
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      @include u.BreakPoint-up(medium) {
+
+
+        background-position: center 80%; 
+      }
+
+      @include u.BreakPoint-up(large) {
+      
+        width: 180%;
+        background: u.image('bg-intro-desktop.svg', u.$image-url);
+        background-repeat: no-repeat;
+        background-size: 110%;
+        background-position: 10% 95%;
+        overflow-x: hidden;
+      }
+    }
+
+  }
+
+  &__text {
+
+    text-align: center;
+
+    h1 {
+
+    }
+
+    p {
+      margin-block-end: 2.25rem;
+    }
+
+    @include u.BreakPoint-up(large) {
+
+      grid-row: 1 / 2;
+      text-align: center;
+    }
+  }  
+
+  &__cta {
+    text-align: center;
+    display: inline-block;  
+  }
+}

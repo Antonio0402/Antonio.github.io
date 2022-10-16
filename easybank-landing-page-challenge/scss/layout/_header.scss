@@ -1,0 +1,144 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use '../utilities' as u;
+
+.header {
+
+  color: u.$very-light-gray;
+  
+  &.open {
+
+    .header__menu {
+
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+      
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+    
+    .header__links {
+
+    }
+  
+    .overlay {
+
+    }
+  }
+
+  nav {
+    padding: 1.125rem;
+  }
+
+  &__logo {
+    
+  }
+
+  &__menu {
+
+    > span { 
+
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: u.$dark-blue;
+      transform-origin: 6px 1.15px;
+
+      @include u.transition-ease(u.$sec-3);
+
+      &:not(:last-child) {
+        margin-block-end: 3px;
+      }
+    }
+  }
+
+  &__links {
+    
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.875rem;
+
+    > a {
+      flex-grow: 0;
+      font-size: u.$font-sz-sml;
+      color: u.$grayish-blue;
+      position: relative;
+      
+      @include u.transition-ease(u.$sec-2);
+      
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1.1875rem;
+        overflow: hidden;
+        height: 2px;
+        background: u.$linear-gradient;
+        opacity: 0;
+
+        @include u.transition-ease(u.$sec-3);
+      }
+      
+      &:hover {
+        color: u.$dark-blue;  
+
+        &::before {
+          opacity: 1;  
+        }
+      }
+    }
+    
+    @include u.BreakPoint-down(medium) {
+
+      visibility: hidden;
+      position: absolute;
+      top: u.$nav-height + 1.5rem;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: calc(100% - 3rem);
+      border-radius: 0.25rem;
+      padding: 1.625rem;
+      background-color: u.$white;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      z-index: 9999;
+
+      > a {
+
+        &::before {
+          bottom: 0;  
+        }
+      }
+    }
+  }
+}
+
+  .overlay {
+
+    position: fixed;
+    top: u.$nav-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, u.$dark-blue, transparent);
+    z-index: -1;
+
+    @include u.BreakPoint-up(large) {
+      
+      &.fade-in {
+        
+        display: none;
+      }
+    }
+
+}
+

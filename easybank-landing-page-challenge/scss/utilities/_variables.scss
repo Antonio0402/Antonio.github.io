@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Container's maximum width
+/// @type Length
+$max-width: 69.375rem; //1100px
+
+// Navigaiton's maximum height
+$nav-height: 3.625rem; //58px
+
+// Container's padding:
+// @type Length
+$inline-padding: 1.75rem; //28px
+$block-padding: 3.75rem; //60px
+
+// Transition time-interval
+$sec-3: 0.3s;
+$sec-2: 0.2s;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$image-url: '../';
